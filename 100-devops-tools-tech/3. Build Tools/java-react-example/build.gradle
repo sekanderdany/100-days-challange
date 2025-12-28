@@ -1,0 +1,35 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.7.11'
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+repositories {
+  mavenCentral()
+}
+
+sourceCompatibility = 17
+targetCompatibility = 17
+
+dependencies {
+  implementation(
+      "org.springframework.boot:spring-boot-starter-web:2.7.11",
+      "org.springframework.boot:spring-boot-devtools:2.6.4"
+  )
+  testImplementation(
+      "org.springframework.boot:spring-boot-starter-test:2.7.11"
+  )
+}
+
+tasks.withType(Test) {
+  testLogging {
+    exceptionFormat = 'full'
+    events 'passed', 'skipped', 'failed'
+  }
+}
