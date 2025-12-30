@@ -4,8 +4,7 @@ package main
 
 import "fmt"
 
-func main()
- {
+func main() {
 	// Integers
 	// Floating Point Numbers
 	// Complex Numbers
