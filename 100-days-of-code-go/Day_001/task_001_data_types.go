@@ -6,7 +6,7 @@ import "fmt"
 
 func main()
  {
-	// Ingegers
+	// Integers
 	// Floating Point Numbers
 	// Complex Numbers
 	// Characters (rune)
