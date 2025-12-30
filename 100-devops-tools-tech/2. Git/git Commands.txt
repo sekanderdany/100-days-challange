@@ -1,0 +1,320 @@
+Install Git
+===========
+apt-get install git
+
+Github
+=========
+
+Create ssh-key
+---------------
+ssh-keygen -t rsa -b 2048 -C "dany-key"
+ssh-keygen
+
+cat /home/manar/.ssh/id_rsa.pub
+
+
+Go to github.com> settings> ssh & gpg keys > new ssh key > add the key
+
+
+Give command on cmd of the VM >
+
+ssh -T git@github.com
+
+Gitlab
+======
+Go to gitlab.com> click on profile icon > preferences > ssh keys > add ssh key
+
+===================
+
+=========================
+Clone a git repository
+=========================
+# git clone https://github.com/sekanderdany/git-tutorial.git
+# git status	[status of local repo]
+# vim README
+# git add .		[move all changes from working directory to staging area]
+# git commit
+
+===================================================
+Create local project and push to remote repository
+===================================================
+# git clone git@gitlab.com:nanuchi/mynodeapp-cicd-project.git
+# git init --initial-branch=main
+# git add .
+# git commit -m "Initial commit"
+
+	- Create a blank project on gitlab
+	- name the project "nodeapp"
+	- connect to local project with below command
+	
+# git remote add origin git@gitlab.com:sekanderdany/nodeapp.git
+
+####### to remove origin ############
+# git remote remove origin
+
+- Git push
+# git push -u origin main
+
+####### Connect to master branch  ############
+# git push --set-upstream origin master
+
+
+ls
+cd git-tutorial/
+ls
+ls -la
+git config --global user.name "Dany Git"
+git config --global user.email "sekanderdany@yahoo.com"
+vim new_menu.md
+git status
+git add .
+git status
+vim new_menu.md
+git status
+git add .
+git status
+vim new_menu.md
+git status
+git commit
+git status
+git log
+git push
+
+
+Push a local git repository
+============================
+
+cd /root/mynodeapp
+git init
+git remote add origin https://github.com/sekanderdany/testnodeapp.git
+git push --set-upstream origin master
+git status
+
+
+Local Repository Git Guide
+================================
+…or create a new repository on the command line
+--------------------------------------------------
+echo "# local-rep" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sekanderdany/local-rep.git
+git push -u origin main
+
+…or push an existing repository from the command line
+-------------------------------------------------------------
+git remote add origin https://github.com/sekanderdany/local-rep.git
+git branch -M main
+git push -u origin main
+
+
+Concept of Branches
+===================
+
+git branch
+git init
+git status
+git add .
+git commit
+git push
+history
+git remote add origin https://github.com/sekanderdany/testnodeapp.git
+git push
+git branch
+git pull
+git branch
+git checkout -b feature/user-auth
+git pull
+git config pull.rebase true
+git pull
+git status
+git branch
+git checkout master
+git branch
+git checkout feature/user-auth
+git checkout master
+git checkout -b feature/db-connect [creating new branch]
+git branch
+git status
+ls
+vim README.md
+git branch
+git status
+git commit
+git add .
+git commit
+git status
+git push
+git push --set-upstream origin feature/db-connect [push to remote repository]
+vim README.md
+git add .
+git commit
+gut push
+
+Merge Request
+===================
+-- got to gitlab
+-- right side of the branch click on merge request
+-- confirm on next page
+-- in admin account click on merge
+
+Deleting a branch
+===================
+git branch
+git checkout master
+git status
+git pull
+git status
+git branch
+git branch --set-upstream-to=origin/master
+git pull [make sure we pull]
+git status
+git branch -d feature/user-auth [Will delete both local and remote branch]
+git branch
+
+Avoiding Merge Commits (rebase)
+===================================
+git pull -r [-r= rebase, local commits got stack on top of remote commit]
+
+Resolving Merge Conflicts
+===========================
+
+--If someone edits same file same line 
+	- First Pull
+	- Git Branch will go to
+			- * (no branch, rebasing feature/bugfix) - state
+			- From here make the changes necessary
+			- git add .
+			- git commit
+			- git rebase --continue
+			- it will show message - Successfully rebased and updated refs/heads/feature/bugfix
+			- git push
+
+Don't Track certain files (.gitignore)
+=========================================
+create .gitignore
+
+input what to exclude
+
+	.idea/*
+	build/*
+	node_modules/*
+
+# git status
+
+--if already a folder or file is tracked by git that we need to exclude:
+
+git rm -r --cached .idea
+git add .
+git status
+git push
+
+Save work-in-progress changes (Stash)
+========================================
+make changes to another branch
+
+--everything will be removed from git cached.  then check git status
+
+git status
+git checkout -b feature/stage
+vi README.md 
+git status
+git stash [hide changes and save current changes for later]
+git checkout main
+
+--after satisfying changes to other branch or main branch checkout to the branch that has been stash then-
+
+git stash pop
+
+usecase - 
+	-- to switch to another branch after returing user stash pop. 
+	-- Hide current changes and do work on other feature. 
+	-- Revome current changes. no need to use stash pop then.
+
+Going Back in history
+======================
+
+git log
+
+-- copy the commit string
+
+git checkout 5e2216b5779348e47c28d7a6e2f5d44994711d23
+
+-- a message will show - You are in 'detached HEAD' state. means its not the most up to date state.
+
+-- create a branch from it
+
+git checkout -b feature/history-dbconnect
+
+-- or go to a latest branch
+
+git checkout feature/bugfix
+
+Undoing and changing commits
+=================================
+
+vi README.md 
+git add .
+git status
+git commit -m 'Testing changing commits'
+
+-- suppose we dont want this change to push to remote repository
+-- or we want to revert the whole commit
+-- HEAD -> is the last commit pointer
+
+git reset --hard HEAD~1 [here 1 is the number of commit i want to reset]
+
+-- If we want the change to be there but the commits to be removed
+
+git reset --soft HEAD~1
+
+-- Soft reset helps to modify the file again. Hard reset removes changes also
+-- If we want the reset commits after push to remote reposity
+
+git reset --hard HEAD~1
+
+git push --force [as we have revert to something, so just doing git push will not allow us to do that]
+
+-- If we want to revert a big code pushed to remote repository
+
+git revert e3901f6a85ce8b5e5bd81beffa21c4b437329e24 [id or hash of the commit]
+git push
+
+Merging Branches (git merge and merge in UI)
+=============================================
+
+-- if we are behind in a branch and master/main branch commits are way ahead,
+-- We need changes from master/main branch alonge with our branch
+
+git checkout main
+git pull
+git checkout feature/bugfix
+git merge main
+git log
+git push
+
+Git for DevOps
+=====================
+
+User cases
+  - Infrastructure as Code
+    - Many Kubernetes Configuration Files
+	- Terraform and Ansible Configuration Files
+	- Bash and Python Scripts
+	- Deployment to Kubernetes
+	   - Tracked - history of changes
+	   - securely stored in one place
+	   - shareable for DevOps team
+
+
+
+
+
+
+
+
+
+
+
