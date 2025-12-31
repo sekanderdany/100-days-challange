@@ -24,10 +24,23 @@ func main() {
 	const GRAVITY = 9.81
 	const days int = 7
 
-	const {
+	const (
 		monday = 1
 		tuesday = 2
 		wednesday = 3 // untyped constant
 		thursday int = 4 // typed constant
-	}
+	)
+
+	fmt.Println("Name:", name)
+	fmt.Println("Age:", age)
+	fmt.Println("Name1:", name1)
+	fmt.Println("City:", city)
+	fmt.Println("Count:", count)
+	fmt.Println("Pi:", pi)
+	fmt.Println("Gravity:", GRAVITY)
+	fmt.Println("Days in a week:", days)
+	fmt.Println("Monday:", monday)
+	fmt.Println("Tuesday:", tuesday)
+	fmt.Println("Wednesday:", wednesday)
+	fmt.Println("Thursday:", thursday)
 }

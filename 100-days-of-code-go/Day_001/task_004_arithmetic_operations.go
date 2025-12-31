@@ -50,5 +50,4 @@ func main() {
 	fmt.Println("Small Float64 value after division:", smallFloat)
 	smallFloat = smallFloat / math.MaxFloat64
 	fmt.Println("Small Float64 value after dividing by MaxFloat64:", smallFloat)
-	
 }
