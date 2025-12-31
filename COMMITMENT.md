@@ -28,8 +28,8 @@ Just an ordinary guy who wants to try things, fail, get lost for long periods of
 This time, I have a completely separate goal.  
 Or maybe not 😄
 
-The goal is *not* to fail and get lost forever.  
-Haha, just kidding.
+The goal is to - **fail and get lost forever.**  
+Haha, **just kidding**.
 
 But seriously—I **will** fail.  
 Every day.  

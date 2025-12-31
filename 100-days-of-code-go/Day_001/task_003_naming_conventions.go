@@ -13,4 +13,9 @@ func main() {
 
 	// mixedCase
 	// Eg javaScript, htmlDocument, isValid
+
+	const MAXRETRIES = 5
+
+	var employeeID = 1001
+	fmt.Println("Employee ID:", employeeID)
 }

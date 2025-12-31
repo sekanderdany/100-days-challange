@@ -12,3 +12,5 @@ git push -u origin main
 git remote add origin https://github.com/sekanderdany/100-days-challange.git
 git branch -M main
 git push -u origin main
+
+# in vs code - @id:editor.suggestOnTriggerCharacters for turning off auto suggestions
