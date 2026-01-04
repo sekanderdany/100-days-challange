@@ -111,3 +111,6 @@ build/
 Thumbs.db
 *.tmp
 *.temp
+
+# Jupyter Notebook
+.ipynb_checkpoints
