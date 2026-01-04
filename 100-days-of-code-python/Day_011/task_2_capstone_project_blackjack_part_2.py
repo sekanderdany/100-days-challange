@@ -1,29 +1,33 @@
-# Capstone Project - Blackjack Part 1
+# Capstone Project - Blackjack Part 2
 
-'''
-Understanding Project Requirements
-------------------------------
-Rules:
-- The deck is unlimited in size.
-- There are no jokers.
-- The Jack/Queen/King all count as 10.
-- The Ace can count as 11 or 1.
-- The cards in the list have equal probability of being drawn.
-- Cards are not removed from the deck as they are drawn.
-- The computer is the dealer.
-- whoever has the highest score without going over 21 wins.
-
-- The game starts by dealing two cards to the player and two cards to the dealer.
-- The player only sees one of the dealer's cards.
-- The player is asked whether they want to draw another card (hit) or pass (stand).
-- If the player goes over 21 they bust and lose the game.
-- After the player stands, it's the dealer's turn. The dealer draws cards until their score is 17 or higher.
-- The scores are then compared to determine the winner.
-'''
 # TODO 1: Create a function to calculate the card value
 # - Handle number cards (2-10) as their face value
 # - Handle face cards (J, Q, K) as 10
 # - Handle Ace as 11 or 1 based on the hand total
+
+cards = {
+    "Speades": ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'],
+    "Hearts": ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'],
+    "Diamonds": ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'],
+    "Clubs": ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+}
+
+card_values = {
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
+    '10': 10,
+    'J': 10,
+    'Q': 10,
+    'K': 10,
+    'A': 11
+}
+
 
 # TODO 2: Create a function to calculate the total score of a hand
 # - Sum up all card values
