@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// PascalCase
 	// Eg CalculateArea, UserProfile, NewHTTPRequest
@@ -13,4 +15,9 @@ func main() {
 
 	// mixedCase
 	// Eg javaScript, htmlDocument, isValid
+
+	const MAXRETRIES = 5
+
+	var employeeID = 1001
+	fmt.Println("Employee ID:", employeeID)
 }

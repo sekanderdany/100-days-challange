@@ -77,8 +77,14 @@ func main() {
 
 	// Channels, JSON, Text and HTML Templates are more advanced topics and typically require more context to demonstrate effectively.
 	// Print all variables
-	fmt.Println("Integer:", intVar)
-	fmt.Println("Float:", float64Var)
+	fmt.Println("Integer (int):", intVar)
+	fmt.Println("Integer (int8):", int8Var)
+	fmt.Println("Integer (int16):", int16Var)
+	fmt.Println("Integer (int32):", int32Var)
+	fmt.Println("Integer (int64):", int64Var)
+	fmt.Println("Integer (uint):", uintVar)
+	fmt.Println("Float (float32):", float32Var)
+	fmt.Println("Float (float64):", float64Var)
 	fmt.Println("Complex:", complexVar)
 	fmt.Println("Rune:", string(runeVar))
 	fmt.Println("String:", stringVar)
