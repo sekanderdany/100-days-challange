@@ -30,16 +30,10 @@ three interdependent components: data that guides behavior, algorithms
 that learn patterns, and computational infrastructure that enables both
 training and inference.
 
+• Algorithms: Mathematical models and methods that learn patterns from
+data to make predictions or decisions
+• Data: Processes and infrastructure for collecting, storing, processing,
+managing, and serving data for both training and inference
+• Computing: Hardware and software infrastructure that enables training,
+serving, and operation of models at scale
 
-Understanding why this transition to systems-focused ML is happening now
-requires recognizing the convergence of three factors in the last decade:
-1. Massive Datasets: The internet age created unprecedented data volumes
-through web content, social media, sensor networks, and digital transactions.
-Public datasets like ImageNet (millions of labeled images) and
-Common Crawl (billions of web pages) provide the raw material for
-learning complex patterns.
-2. Algorithmic Breakthroughs: Deep learning proved remarkably effective
-across diverse domains, from computer vision to natural language
-processing. Techniques like transformers, attention mechanisms, and
-transfer learning enabled models to learn generalizable representations
-from data.

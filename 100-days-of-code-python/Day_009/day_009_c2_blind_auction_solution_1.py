@@ -20,12 +20,7 @@ next_bidder = True
 
 highest_bid = 0
 winner = ""
-
 auction = {}
-
-
-print(auction)
-
 
 while next_bidder == True:
     name = input("What's your name? :")
