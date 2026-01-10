@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  template:
+    spec:
+      containers:
+      - name: webapp
+        volumeMounts:
+        - name: data
+          mountPath: /var/data
+      volumes:
+      - name: data
+        emptyDir: {}

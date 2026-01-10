@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+
+commonLabels:
+  monitoring: enabled
+
+commonAnnotations:
+  monitoring/scrape: "true"
+
+patchesStrategicMerge:
+- prometheus-sidecar.yaml
+
+resources:
+- metrics-service.yaml

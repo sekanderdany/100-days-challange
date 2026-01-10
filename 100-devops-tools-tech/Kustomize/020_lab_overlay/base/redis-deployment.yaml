@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+  labels:
+    app: ecommerce
+    component: database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecommerce
+      component: database
+  template:
+    metadata:
+      labels:
+        app: ecommerce
+        component: database
+    spec:
+      containers:
+      - name: redis
+        image: redis:6-alpine
+        ports:
+        - containerPort: 6379
+          name: redis
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"

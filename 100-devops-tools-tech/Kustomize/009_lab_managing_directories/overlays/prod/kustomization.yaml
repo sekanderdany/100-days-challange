@@ -1,0 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+namespace: production
+
+namePrefix: prod-
+
+commonLabels:
+  environment: production
+  criticality: high
+
+commonAnnotations:
+  monitoring: "enabled"
+  backup: "enabled"
+
+replicas:
+- name: webapp
+  count: 10
+
+images:
+- name: nginx
+  newTag: "1.21"
+
+patchesStrategicMerge:
+- resources-patch.yaml

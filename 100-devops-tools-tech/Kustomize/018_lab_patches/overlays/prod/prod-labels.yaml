@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels:
+    environment: production
+    tier: frontend
+    criticality: high
+spec:
+  template:
+    metadata:
+      labels:
+        environment: production

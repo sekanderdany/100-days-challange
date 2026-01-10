@@ -1,0 +1,46 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+namespace: payment-prod
+
+namePrefix: prod-
+
+components:
+- ../../components/monitoring
+- ../../components/logging
+- ../../components/security
+- ../../components/ha
+- ../../components/backup
+
+replicas:
+- name: payment-api
+  count: 10
+
+commonLabels:
+  environment: production
+  tier: critical
+
+patches:
+- target:
+    kind: Deployment
+    name: payment-api
+  patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: payment-api
+    spec:
+      template:
+        spec:
+          containers:
+          - name: api
+            resources:
+              requests:
+                memory: "512Mi"
+                cpu: "500m"
+              limits:
+                memory: "1Gi"
+                cpu: "1000m"
