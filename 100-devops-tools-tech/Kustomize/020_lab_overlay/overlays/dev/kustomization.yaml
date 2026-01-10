@@ -1,0 +1,47 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+namespace: ecommerce-dev
+
+namePrefix: dev-
+
+commonLabels:
+  environment: development
+  debug: "true"
+
+replicas:
+- name: api
+  count: 1
+- name: redis
+  count: 1
+
+images:
+- name: nginx
+  newTag: 1.19-alpine
+- name: redis
+  newTag: 6-alpine
+
+patches:
+- target:
+    kind: Deployment
+    name: api
+  patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: api
+    spec:
+      template:
+        spec:
+          containers:
+          - name: api
+            env:
+            - name: ENV
+              value: development
+            - name: DEBUG
+              value: "true"
+            - name: LOG_LEVEL
+              value: debug

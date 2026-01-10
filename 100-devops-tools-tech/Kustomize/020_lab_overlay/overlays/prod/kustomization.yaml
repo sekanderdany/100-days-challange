@@ -1,0 +1,79 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+- hpa.yaml
+
+namespace: ecommerce-prod
+
+namePrefix: prod-
+
+commonLabels:
+  environment: production
+  tier: critical
+  monitoring: enabled
+
+commonAnnotations:
+  managed-by: kustomize
+  contact: ops@example.com
+
+images:
+- name: nginx
+  newName: my-registry.io/nginx
+  newTag: 1.19
+- name: redis
+  newName: my-registry.io/redis
+  newTag: 6-alpine
+
+patchesStrategicMerge:
+- security-patch.yaml
+
+patches:
+- target:
+    kind: Deployment
+    name: api
+  patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: api
+    spec:
+      replicas: 5
+      template:
+        spec:
+          containers:
+          - name: api
+            env:
+            - name: ENV
+              value: production
+            - name: LOG_LEVEL
+              value: info
+            resources:
+              requests:
+                memory: "512Mi"
+                cpu: "500m"
+              limits:
+                memory: "1Gi"
+                cpu: "1000m"
+- target:
+    kind: Deployment
+    name: redis
+  patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: redis
+    spec:
+      replicas: 3
+      template:
+        spec:
+          containers:
+          - name: redis
+            resources:
+              requests:
+                memory: "256Mi"
+                cpu: "200m"
+              limits:
+                memory: "512Mi"
+                cpu: "400m"

@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: payment-backup
+  labels:
+    app: payment
+    component: backup
+spec:
+  schedule: "0 2 * * *"  # Daily at 2 AM
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app: payment
+            component: backup
+        spec:
+          containers:
+          - name: backup
+            image: busybox:latest
+            command:
+            - /bin/sh
+            - -c
+            - echo "Running backup at $(date)"
+          restartPolicy: OnFailure

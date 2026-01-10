@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-api
+  labels:
+    app: payment
+    component: api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: payment
+      component: api
+  template:
+    metadata:
+      labels:
+        app: payment
+        component: api
+    spec:
+      containers:
+      - name: api
+        image: nginx:1.19
+        ports:
+        - containerPort: 80
+          name: http
+        env:
+        - name: APP_NAME
+          value: payment-api
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"

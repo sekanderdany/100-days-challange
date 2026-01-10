@@ -1,0 +1,30 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+namespace: staging
+
+namePrefix: staging-
+
+commonLabels:
+  environment: staging
+  team: platform-team
+
+commonAnnotations:
+  deployed-by: kustomize
+  env-type: staging
+  monitoring: enabled
+
+replicas:
+- name: api
+  count: 3
+- name: redis
+  count: 2
+
+images:
+- name: nginx
+  newTag: "1.20"
+- name: redis
+  newTag: "6.2"
