@@ -19,7 +19,8 @@ Some bugs are sneaky, they only occur under certain conditions. In order to debu
 # dice_num = 3
 # dice_num = 4
 # dice_num = 5
-dice_num = 6
+dice_num = 6 # Found it
+
 # print(dice_images[dice_num])
 
 # 2. Fixed Code
