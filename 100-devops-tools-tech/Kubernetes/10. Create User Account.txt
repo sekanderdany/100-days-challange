@@ -7,11 +7,6 @@ User Creation
 # openssl
 # openssl genrsa -out dev-tom.key 2048
 
-2. Create CertificateSigningRequest for key
----------------------------------------------
-
-# openssl req -new -key dev-tom.key -subj "/CN=tom" -out dev-tom.csr
-
 # cat dev-tom.key
 ---
 -----BEGIN RSA PRIVATE KEY-----
@@ -42,6 +37,9 @@ nBVlAoGBAMkBNwd3zVCFwkJoNGztxvrWPwlZMHwwoQ9wvrYXVQOa84KBdFAcwX1w
 GFn9YgAtrNkJRPEo5GJx9k7J7LO1K5ufhqz6nRVIFzZncKubPRp7
 -----END RSA PRIVATE KEY-----
 ---
+
+2. Create CertificateSigningRequest for key
+---------------------------------------------
 
 # openssl req -new -key dev-tom.key -subj "/CN=tom" -out dev-tom.csr
 
