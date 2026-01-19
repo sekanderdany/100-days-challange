@@ -1,4 +1,4 @@
-# Step 4 - Fixing errors and Watching for Red Lines
+# Tip 4 - Fixing errors and Watching for Red Lines
 
 try:
     age = int(input("How old are you? "))

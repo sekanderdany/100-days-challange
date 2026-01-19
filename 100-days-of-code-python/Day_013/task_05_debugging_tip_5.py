@@ -1,4 +1,4 @@
-# Step 5 - Print is your friend
+# Tip 5 - Print is your friend
 
 word_per_page = 0
 

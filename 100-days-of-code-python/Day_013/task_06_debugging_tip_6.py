@@ -1,4 +1,4 @@
-# Step - 6 - Using a Debugger
+# Tip - 6 - Using a Debugger
 
 import random
 import maths

@@ -1,4 +1,4 @@
-# Step 1 - Describe the problem
+# Tip 1 - Describe the problem
 
 def my_function():
     for i in range(1, 20):

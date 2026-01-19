@@ -1,4 +1,4 @@
-# Step 3 - Play Computer and Evaluate each Line
+# Tip 3 - Play Computer and Evaluate each Line
 
 year = int(input("What's your year of birth? "))
 
