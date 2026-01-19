@@ -1,4 +1,4 @@
-# Step 2 - Reproduce the bug
+# Tip 2 - Reproduce the bug
 
 from random import randint
 dice_images = ["❶", "❷", "❸", "❹", "❺", "❻"]
