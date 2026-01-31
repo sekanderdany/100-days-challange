@@ -21,14 +21,14 @@ Think of exchanges like a post office sorting center:
        │ Publish (with routing key)
        ▼
 ┌─────────────────────────────────┐
-│        Exchange             │
-│  (Routes messages to queues) │
-└──────┬──────────────────────┘
+│        Exchange                 │
+│  (Routes messages to queues)    │
+└──────┬──────────────────────────┘
        │
        │ Routing Rules (Bindings)
-       ├────────────────┬────────────────┬────────────────┐
-       │                │                │                │
-       ▼                ▼                ▼                ▼
+       ├──────────────┬────────────────┬────────────────┐
+       │              │                │                │
+       ▼              ▼                ▼                ▼
 ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
 │  Queue A │    │  Queue B │    │  Queue C │    │  Queue D │
 │ (orders) │    │ (logs)   │    │ (alerts) │    │ (events) │
