@@ -1,0 +1,636 @@
+================================================================================
+VAULT ZERO TO HERO - COMPLETE COURSE STRUCTURE
+Production-Ready DevSecOps Secrets Management Course
+================================================================================
+
+001 Vault Fundamentals and Architecture
+├─ 001_01 What is Vault and Why Modern DevSecOps Needs It
+├─ 001_02 How Vault Works - The Security Model Explained
+├─ 001_03 Real-World Use Cases and Business Benefits
+├─ 001_04 Vault Enterprise vs Open Source - Making the Right Choice
+├─ 001_05 Understanding the Vault Architecture - Deep Dive
+├─ 001_06 Vault Components and Their Interactions
+├─ 001_07 Vault Pathing Structure and Data Organization
+├─ 001_08 Vault Data Protection and Encryption Fundamentals
+├─ 001_09 The Seal and Unseal Mechanism Explained
+├─ 001_10 Unsealing with Key Shards - Manual Process
+├─ 001_11 Lab - Unsealing Vault with Key Shards
+├─ 001_12 Auto Unseal with KMS - Cloud-Based Unsealing
+├─ 001_13 Lab - Implementing KMS Auto Unseal
+├─ 001_14 Transit Auto Unseal - Using Vault to Unseal Vault
+├─ 001_15 Lab - Transit Auto Unseal Implementation
+├─ 001_16 HSM Auto Unseal - Hardware Security Module Integration
+├─ 001_17 Pros and Cons of Unseal Options - Decision Framework
+├─ 001_18 Lab - Migrating from Manual Unseal to Auto Unseal
+├─ 001_19 Vault Initialization - Best Practices and Security
+├─ 001_20 Vault Configuration File - Complete Reference
+├─ 001_21 Lab - Building Production-Ready Vault Configuration
+├─ 001_22 Storage Backends - Consul vs Integrated Storage Raft
+├─ 001_23 Integrated Storage Raft - Modern Default Backend
+├─ 001_24 Lab - Configuring Integrated Storage Manually
+├─ 001_25 Audit Devices - Complete Audit Trail Configuration
+└─ 001_26 Vault Interfaces - CLI, API, and UI
+
+002 Installing and Deploying Vault
+├─ 002_01 Vault Installation Overview and Pre-Deployment Checklist
+├─ 002_02 System Requirements and Resource Planning
+├─ 002_03 Installing Vault Using Binary Distribution
+├─ 002_04 Installing Vault Using Package Managers
+├─ 002_05 Installing Vault Using Docker and Containers
+├─ 002_06 Installing Vault Using Kubernetes Helm Charts
+├─ 002_07 Installing Vault Using Infrastructure as Code
+├─ 002_08 Lab - Automating Vault Installation with Terraform
+├─ 002_09 Running Vault Dev Server - Development Mode
+├─ 002_10 Lab - Setting Up Vault Dev Environment
+├─ 002_11 Running Vault Server in Production - Production Mode
+├─ 002_12 Lab - Deploying Production Vault Cluster
+├─ 002_13 Configuring the Consul Storage Backend - Legacy Approach
+├─ 002_14 Configuring the Integrated Storage Raft Backend
+├─ 002_15 Lab - Setting Up Raft-Based Vault Cluster
+├─ 002_16 High Availability Architecture Design
+├─ 002_17 Building a Highly Available Vault Cluster Step by Step
+├─ 002_18 Lab - Manual HA Cluster Configuration
+├─ 002_19 Lab - Building HA Cluster Using Retry Join
+├─ 002_20 Lab - Building HA Cluster Using Auto Join Discovery
+├─ 002_21 Load Balancing Vault - HAProxy and Nginx Configuration
+├─ 002_22 Lab - Configuring HAProxy for Vault
+├─ 002_23 Cloud-Specific Deployment - AWS Deployment Patterns
+├─ 002_24 Cloud-Specific Deployment - Azure Deployment Patterns
+├─ 002_25 Cloud-Specific Deployment - GCP Deployment Patterns
+└─ 002_26 Resource - Complete Vault Deployment Checklist
+
+003 Authentication Methods - Identity and Access
+├─ 003_01 Authentication Methods - Complete Overview
+├─ 003_02 Introduction to Vault Authentication Model
+├─ 003_03 Working with Auth Methods - Enable Disable Configure
+├─ 003_04 Configuring Auth Methods Using the Vault CLI
+├─ 003_05 Lab - Managing Auth Methods with CLI
+├─ 003_06 Configuring Auth Methods Using the Vault API
+├─ 003_07 Lab - Auth Method Management via API
+├─ 003_08 Configuring Auth Methods Using the Vault UI
+├─ 003_09 Lab - Auth Method Configuration in UI
+├─ 003_10 Vault Authentication Using the CLI
+├─ 003_11 Lab - CLI Authentication Workflows
+├─ 003_12 Vault Authentication Using the API
+├─ 003_13 Lab - API Authentication Patterns
+├─ 003_14 Vault Authentication Using the UI
+├─ 003_15 Lab - UI-Based Authentication
+├─ 003_16 Vault Entities - Identity Management Foundations
+├─ 003_17 Vault Identity Groups - Managing Group Access
+├─ 003_18 Entity and Group Policies - Linking Identity to Access
+├─ 003_19 Lab - Implementing Entity and Group-Based Access
+├─ 003_20 Choosing the Right Auth Method for Your Use Case
+├─ 003_21 Differentiating Human vs System Auth Methods
+├─ 003_22 Token Auth Method - The Default Authentication
+├─ 003_23 UserPass Auth Method - Username and Password Authentication
+├─ 003_24 Lab - Implementing UserPass Authentication
+├─ 003_25 AppRole Auth Method - Machine to Machine Authentication
+├─ 003_26 AppRole Best Practices - Role ID and Secret ID Management
+├─ 003_27 Lab - Implementing AppRole Authentication
+├─ 003_28 Lab - AppRole with AWS EC2 Auto-Authentication
+├─ 003_29 GitHub Auth Method - GitHub Organization Authentication
+├─ 003_30 Lab - GitHub Auth Integration
+├─ 003_31 LDAP and Active Directory Auth Methods
+├─ 003_32 Lab - LDAP Authentication Integration
+├─ 003_33 Okta Auth Method - Enterprise SSO Integration
+├─ 003_34 Lab - Okta Authentication Setup
+├─ 003_35 OIDC Auth Method - OpenID Connect Integration
+├─ 003_36 Lab - OIDC Authentication Implementation
+├─ 003_37 Kubernetes Auth Method - Pod Authentication
+├─ 003_38 Kubernetes Auth Method - Service Account Tokens
+├─ 003_39 Lab - Kubernetes Authentication Setup
+├─ 003_40 AWS IAM Auth Method - IAM-Based Authentication
+├─ 003_41 Lab - AWS IAM Authentication
+├─ 003_42 GCP IAM Auth Method - GCP IAM Authentication
+├─ 003_43 Lab - GCP IAM Authentication
+├─ 003_44 Azure Auth Method - Managed Identity Authentication
+├─ 003_45 Lab - Azure Authentication
+├─ 003_46 Certificate Auth Method - TLS Certificate Authentication
+├─ 003_47 Lab - Certificate Authentication Setup
+├─ 003_48 MFA and Multi-Factor Authentication Options
+├─ 003_49 Lab - Implementing MFA
+├─ 003_50 Lab - Comprehensive Auth Method Implementation
+└─ 003_51 Resource - Auth Method Decision Matrix
+
+004 Vault Policies - Access Control Fundamentals
+├─ 004_01 Vault Policies - Section Overview and Importance
+├─ 004_02 Introduction to Vault Policies - ACL System
+├─ 004_03 Managing Policies Using the Vault CLI
+├─ 004_04 Lab - Policy Management with CLI
+├─ 004_05 Managing Policies Using the Vault UI
+├─ 004_06 Lab - Policy Management in UI
+├─ 004_07 Managing Policies Using the Vault API
+├─ 004_08 Lab - Policy Management via API
+├─ 004_09 Anatomy of a Vault Policy - Policy Structure
+├─ 004_10 Vault Policies - Path Matching and Wildcards
+├─ 004_11 Vault Policies - Capabilities - CRUDL Permissions
+├─ 004_12 Vault Policies - Parameters - Fine Grained Control
+├─ 004_13 Customizing Policy Paths - Advanced Patterns
+├─ 004_14 Policy Templates and Reusable Policies
+├─ 004_15 Working with Policies - Best Practices
+├─ 004_16 Lab - Designing Comprehensive Policy Structure
+├─ 004_17 Lab - Implementing Least Privilege Policies
+├─ 004_18 Policy Hierarchies and Inheritance
+├─ 004_19 Policy Evaluation Order and Precedence
+├─ 004_20 Common Policy Patterns and Examples
+├─ 004_21 Secrets Engine Policies - KV Database Transit
+├─ 004_22 Auth Method Policies - Managing Auth Configuration
+├─ 004_23 Operator Policies - Managing Vault Operations
+├─ 004_24 Root Policy - When and How to Use It
+├─ 004_25 Lab - Policy Design for Multi-Team Environment
+├─ 004_26 Policy Testing and Validation
+├─ 004_27 Lab - Policy Testing Framework
+├─ 004_28 Policy Auditing and Compliance
+└─ 004_29 Resource - Vault Policy Cheatsheet and Examples
+
+005 Vault Tokens - Authentication and Lifecycle Management
+├─ 005_01 Vault Tokens - Section Overview
+├─ 005_02 Vault Token Changes in Version 1.10 and Beyond
+├─ 005_03 Introduction to Vault Tokens - The Authentication Foundation
+├─ 005_04 Token Structure - ID Type Metadata and Policies
+├─ 005_05 Token Hierarchy - Parent Child Relationships
+├─ 005_06 Root Tokens - The Master Key
+├─ 005_07 Managing Root Tokens - Best Practices
+├─ 005_08 Controlling the Token Lifecycle - Creation Renewal Revocation
+├─ 005_09 Token TTLs - Time to Live Configuration
+├─ 005_10 Periodic Tokens - Self-Renewing Tokens
+├─ 005_11 Lab - Implementing Periodic Tokens
+├─ 005_12 Service Tokens with Use Limits - One Time Tokens
+├─ 005_13 Lab - Use Limited Tokens
+├─ 005_14 Orphan Tokens - Tokens Without Parent
+├─ 005_15 Lab - Orphan Token Usage Patterns
+├─ 005_16 Token Types - Service vs Batch Tokens
+├─ 005_17 Service Tokens - Persistent Tokens with Tracking
+├─ 005_18 Batch Tokens - Lightweight Scalable Tokens
+├─ 005_19 Lab - Choosing Between Service and Batch Tokens
+├─ 005_20 Setting the Token Type - Default Configuration
+├─ 005_21 Token Accessors - Reference IDs for Management
+├─ 005_22 Lab - Token Accessor Usage
+├─ 005_23 Managing Tokens Using the Vault CLI
+├─ 005_24 Lab - CLI Token Management
+├─ 005_25 Managing Tokens Using the Vault UI
+├─ 005_26 Lab - UI Token Management
+├─ 005_27 Managing Tokens Using the Vault API
+├─ 005_28 Lab - API Token Management
+├─ 005_29 Token Lookup - Inspecting Token Metadata
+├─ 005_30 Token Renewal - Extending Token Lifetime
+├─ 005_31 Token Revocation - Revoking Single Tokens
+├─ 005_32 Token Revocation - Revoking Token Trees
+├─ 005_33 Token Tidy - Cleaning Up Expired Tokens
+├─ 005_34 Lab - Token Lifecycle Management
+├─ 005_35 Create a Token Based on Use Cases - Decision Guide
+├─ 005_36 Web Application Tokens - Interactive Sessions
+├─ 005_37 Service Application Tokens - Long Running Services
+├─ 005_38 CI CD Pipeline Tokens - Automation Authentication
+├─ 005_39 Kubernetes Pod Tokens - Container Authentication
+├─ 005_40 Lab - End to End Token Management Workflow
+└─ 005_41 Resource - Token Management Best Practices
+
+006 Secrets Engines - Managing Secrets and Credentials
+├─ 006_01 Secrets Engines - Section Overview
+├─ 006_02 Static vs Dynamic Secrets - Understanding the Difference
+├─ 006_03 Introduction to Secrets Engines - The Vault Backend
+├─ 006_04 Working with Secrets Engines - Enable Disable Configure
+├─ 006_05 Secrets Engine Paths - Mount Points and Configuration
+├─ 006_06 Configuring a Secrets Engine for Dynamic Credentials
+├─ 006_07 Lease-Based Secret Management - Automatic Rotation
+├─ 006_08 Lab - Understanding Leases and Renewals
+├─ 006_09 Key Value KV Secrets Engine - Static Storage
+├─ 006_10 KV v1 vs KV v2 - Understanding Versions
+├─ 006_11 Working with the KV Secrets Engine - CRUD Operations
+├─ 006_12 Lab - KV Secrets Engine Implementation
+├─ 006_13 Lab - KV v2 Versioning and Check and Set
+├─ 006_14 Database Secrets Engine - Dynamic Database Credentials
+├─ 006_15 Database Secrets Engine - Supported Databases
+├─ 006_16 Database Secrets Engine - Connection Configuration
+├─ 006_17 Database Secrets Engine - Role-Based Access Control
+├─ 006_18 Database Secrets Engine - Credential Rotation
+├─ 006_19 Lab - PostgreSQL Dynamic Credentials
+├─ 006_20 Lab - MySQL Dynamic Credentials
+├─ 006_21 Lab - MongoDB Dynamic Credentials
+├─ 006_22 Lab - Database Secrets Engine in Production
+├─ 006_23 AWS Secrets Engine - IAM and STS Credentials
+├─ 006_24 AWS Secrets Engine - IAM User Generation
+├─ 006_25 AWS Secrets Engine - IAM Assumed Roles
+├─ 006_26 AWS Secrets Engine - EC2 IAM Roles
+├─ 006_27 Lab - AWS IAM User Secrets
+├─ 006_28 Lab - AWS IAM Assumed Role Secrets
+├─ 006_29 Azure Secrets Engine - Service Principals and Keys
+├─ 006_30 Lab - Azure Dynamic Credentials
+├─ 006_31 GCP Secrets Engine - Service Account Keys and Tokens
+├─ 006_32 Lab - GCP Dynamic Credentials
+├─ 006_33 Transit Secrets Engine - Encryption as a Service
+├─ 006_34 Transit Secrets Engine - Encryption Decryption
+├─ 006_35 Transit Secrets Engine - Data Key Management
+├─ 006_36 Transit Secrets Engine - Hashing HMAC
+├─ 006_37 Transit Secrets Engine - Signing Verification
+├─ 006_38 Lab - Encrypting Data with Transit
+├─ 006_39 Lab - Application Integration with Transit
+├─ 006_40 Lab - Database Encryption with Transit
+├─ 006_41 PKI Secrets Engine - Certificate Authority Management
+├─ 006_42 PKI Secrets Engine - Root and Intermediate CAs
+├─ 006_43 PKI Secrets Engine - Certificate Issuance
+├─ 006_44 PKI Secrets Engine - Certificate Revocation
+├─ 006_45 PKI Secrets Engine - CRL and OCSP Configuration
+├─ 006_46 Lab - Setting Up Internal PKI
+├─ 006_47 Lab - Issuing TLS Certificates
+├─ 006_48 Lab - PKI for Kubernetes Ingress
+├─ 006_49 SSH Secrets Engine - SSH Key Management
+├─ 006_50 SSH Secrets Engine - One Time SSH Keys
+├─ 006_51 SSH Secrets Engine - OTP Mode for SSH
+├─ 006_52 Lab - SSH Secrets Engine Implementation
+├─ 006_53 Vault Consul Secrets Engine - Consul Integration
+├─ 006_54 Lab - Consul Token Management with Vault
+├─ 006_55 RabbitMQ Secrets Engine - Dynamic RabbitMQ Credentials
+├─ 006_56 Lab - RabbitMQ Credentials
+├─ 006_57 Cubbyhole Secrets Engine - Token-Specific Secrets
+├─ 006_58 Lab - Cubbyhole for Response Wrapping
+├─ 006_59 TOTP Secrets Engine - Time-Based One Time Passwords
+├─ 006_60 Lab - TOTP Implementation
+├─ 006_61 Identity Secrets Engine - Group and Entity Management
+├─ 006_62 Lab - Identity Secrets Engine Usage
+├─ 006_63 AWS Lambda Secrets Engine - Lambda Function Integration
+├─ 006_64 Kubernetes Secrets Engine - Kubernetes Secrets Sync
+├─ 006_65 Lab - Kubernetes Secrets Sync
+├─ 006_66 Nomad Secrets Engine - Nomad Integration
+├─ 006_67 AliCloud Aliyun Secrets Engine
+├─ 006_68 Custom Secrets Engines - Plugin Architecture
+├─ 006_69 Lab - Comprehensive Secrets Engine Implementation
+└─ 006_70 Resource - Secrets Engine Selection Guide
+
+007 Vault Agent - Application Integration
+├─ 007_01 Introduction to the Vault Agent
+├─ 007_02 Vault Agent vs Client Libraries - When to Use Each
+├─ 007_03 Vault Agent Auto-Auth - Automatic Authentication
+├─ 007_04 Vault Agent Token Sink - Managing Tokens
+├─ 007_05 Vault Agent Auto-Auth Methods - AppRole Kubernetes AWS
+├─ 007_06 Lab - Vault Agent Setup and Configuration
+├─ 007_07 Lab - Vault Agent with AppRole Auto-Auth
+├─ 007_08 Lab - Vault Agent with Kubernetes Auto-Auth
+├─ 007_09 Lab - Vault Agent with AWS IAM Auto-Auth
+├─ 007_10 Vault Agent Templating - Dynamic Configuration Files
+├─ 007_11 Vault Agent Template Syntax
+├─ 007_12 Lab - Vault Agent Templating for Applications
+├─ 007_13 Lab - Vault Agent for Database Credentials
+├─ 007_14 Lab - Vault Agent for TLS Certificates
+├─ 007_15 Vault Agent Caching - Reducing Vault Load
+├─ 007_16 Vault Agent Sink - File-Based Secret Delivery
+├─ 007_17 Vault Agent Configuration Files - Complete Reference
+├─ 007_18 Lab - Production Vault Agent Deployment
+├─ 007_19 Vault Agent Sidecar Pattern - Kubernetes Deployment
+├─ 007_20 Lab - Vault Agent as Kubernetes Sidecar
+├─ 007_21 Vault Agent with Consul Connect - Service Mesh Integration
+├─ 007_22 Lab - Vault Agent with Consul Connect
+├─ 007_23 Vault Agent Monitoring and Troubleshooting
+└─ 007_24 Resource - Vault Agent Best Practices
+
+008 Vault Replication - Enterprise Edition
+├─ 008_01 Introduction to Vault Replication
+├─ 008_02 Replication Architecture - Primary and Secondary Clusters
+├─ 008_03 Performance Replication vs Disaster Recovery Replication
+├─ 008_04 Replication Modes - Understanding the Differences
+├─ 008_05 Performance Replication - Global Read Scaling
+├─ 008_06 Performance Replication - Use Cases and Benefits
+├─ 008_07 Disaster Recovery Replication - Cross Region Data Sync
+├─ 008_08 Disaster Recovery Replication - Use Cases and Benefits
+├─ 008_09 Replication Setup - Architecture and Planning
+├─ 008_10 Configuring Replication Using the Vault CLI
+├─ 008_11 Lab - Performance Replication CLI Setup
+├─ 008_12 Lab - DR Replication CLI Setup
+├─ 008_13 Configuring Replication Using the Vault UI
+├─ 008_14 Lab - Replication Configuration in UI
+├─ 008_15 Performance Replication - Primary Cluster Configuration
+├─ 008_16 Performance Replication - Secondary Cluster Configuration
+├─ 008_17 Lab - Performance Replication End to End
+├─ 008_18 Disaster Recovery Replication - Primary Configuration
+├─ 008_19 Disaster Recovery Replication - Secondary Configuration
+├─ 008_20 Lab - Disaster Recovery Replication End to End
+├─ 008_21 Replication with Namespaces - Multi-Tenant Replication
+├─ 008_22 Replication and Failover - Automatic vs Manual
+├─ 008_23 Promoting a Secondary Cluster to Primary
+├─ 008_24 Lab - DR Promotion and Failover
+├─ 008_25 Replication Monitoring and Troubleshooting
+├─ 008_26 Replication Best Practices and Considerations
+├─ 008_27 Replication and Backup Strategy
+└─ 008_28 Resource - Replication Planning Checklist
+
+009 Vault Security Hardening and Operations
+├─ 009_01 Vault Security Hardening - Overview
+├─ 009_02 Network Security - TLS and mTLS Configuration
+├─ 009_03 Lab - Configuring TLS for Vault
+├─ 009_04 Lab - Configuring mTLS for Vault
+├─ 009_05 Firewall and Network Isolation
+├─ 009_06 API Gateway Integration
+├─ 009_07 Operating System Hardening
+├─ 009_08 File System Permissions and Security
+├─ 009_09 Secure Vault Initialization - Root Key Management
+├─ 009_10 Lab - Secure Initialization Best Practices
+├─ 009_11 Regenerating a Root Token - Emergency Recovery
+├─ 009_12 Lab - Root Token Regeneration
+├─ 009_13 Rekey Vault and Rotate Encryption Keys
+├─ 009_14 Lab - Rekeying Vault
+├─ 009_15 Lab - Rotating Encryption Keys
+├─ 009_16 HSM Integration - Hardware Security Module Setup
+├─ 009_17 HSM Integration - Seal Wrapping
+├─ 009_18 Lab - HSM Configuration
+├─ 009_19 Auto Unsealing Vault - Complete Guide
+├─ 009_20 Lab - Auto Unseal Implementation
+├─ 009_21 Auto Unseal with AWS KMS
+├─ 009_22 Auto Unseal with Azure Key Vault
+├─ 009_23 Auto Unseal with GCP KMS
+├─ 009_24 Lab - Cloud KMS Auto Unseal
+├─ 009_25 Auto Unseal with Transit - Vault Unsealing Vault
+├─ 009_26 Lab - Transit Auto Unseal
+├─ 009_27 Vault Encryption at Rest - Data Protection
+├─ 009_28 Vault Encryption in Transit - TLS Configuration
+├─ 009_29 Key Rotation Strategies
+├─ 009_30 Backup and Restore Strategies
+├─ 009_31 Integrated Storage Snapshots
+├─ 009_32 Lab - Creating and Restoring Snapshots
+├─ 009_33 Disaster Recovery Planning
+├─ 009_34 Incident Response for Vault
+├─ 009_35 Vault Monitoring - Metrics and Telemetry
+├─ 009_36 Operational Metrics - Performance Monitoring
+├─ 009_37 Lab - Setting Up Vault Monitoring
+├─ 009_38 Audit Logging - Complete Audit Trail
+├─ 009_39 Audit Log Formats and Analysis
+├─ 009_40 Lab - Configuring Audit Devices
+├─ 009_41 Lab - Audit Log Analysis with Splunk
+├─ 009_42 Vault Operational Logs - Troubleshooting
+├─ 009_43 Lab - Operational Log Analysis
+├─ 009_44 Prometheus Integration - Metrics Export
+├─ 009_45 Lab - Prometheus Metrics Setup
+├─ 009_46 Grafana Dashboards for Vault
+├─ 009_47 Alerting on Vault Events
+├─ 009_48 Lab - Setting Up Alerts
+├─ 009_49 Vault Upgrade Strategy - Zero Downtime Upgrades
+├─ 009_50 Lab - Vault Upgrade Process
+├─ 009_51 Vault Security Checklist
+└─ 009_52 Resource - Vault Operations Guide
+
+010 Vault in Kubernetes - Cloud Native Deployment
+├─ 010_01 Running Vault in Kubernetes - Overview
+├─ 010_02 Kubernetes Deployment Patterns
+├─ 010_03 Vault Helm Chart - Production Deployment
+├─ 010_04 Lab - Deploying Vault with Helm
+├─ 010_05 Vault in Kubernetes - StatefulSet Configuration
+├─ 010_06 Vault in Kubernetes - Service Configuration
+├─ 010_07 Vault in Kubernetes - Ingress and API Gateway
+├─ 010_08 Lab - Kubernetes Service Configuration
+├─ 010_09 Kubernetes Auth Method for Pods
+├─ 010_10 Kubernetes Auth Method - Service Account Tokens
+├─ 010_11 Lab - Kubernetes Auth Method Setup
+├─ 010_12 Vault Agent in Kubernetes - Sidecar Pattern
+├─ 010_13 Vault Agent Injector - Automatic Secret Injection
+├─ 010_14 Lab - Vault Agent Injector Setup
+├─ 010_15 Lab - Injecting Secrets into Pods
+├─ 010_16 Kubernetes Secrets Sync - Vault to K8s Secrets
+├─ 010_17 Lab - Kubernetes Secrets Sync
+├─ 010_18 External Secrets Operator - Kubernetes Integration
+├─ 010_19 Lab - External Secrets Operator
+├─ 010_20 Vault CSI Driver - Secret Storage Class
+├─ 010_21 Lab - Vault CSI Driver
+├─ 010_22 Vault Pod Identity - Alternative to Sidecars
+├─ 010_23 Lab - Vault Pod Identity
+├─ 010_24 Consul Connect and Vault - Service Mesh Integration
+├─ 010_25 Lab - Service Mesh with Vault
+├─ 010_26 Monitoring Vault in Kubernetes
+├─ 010_27 Lab - Prometheus Monitoring for K8s Vault
+├─ 010_28 Vault Backup and Restore in Kubernetes
+├─ 010_29 Lab - Kubernetes Backup Strategy
+├─ 010_30 Vault Upgrade in Kubernetes - Rolling Updates
+├─ 010_31 Lab - Kubernetes Upgrade Process
+├─ 010_32 Multi-Cluster Vault in Kubernetes
+├─ 010_33 Resource - Kubernetes Vault Best Practices
+
+011 Advanced Access Control - Enterprise Features
+├─ 011_01 Vault Identity Entities and Groups - Deep Dive
+├─ 011_02 Identity Entities - Merging and Alias Management
+├─ 011_03 Identity Groups - Group and Member Management
+├─ 011_04 Lab - Advanced Identity Management
+├─ 011_05 Vault Policies - Advanced Patterns
+├─ 011_06 Vault Policies - Policy Templating and Reusability
+├─ 011_07 Vault Policies - Policy Governance and Approval
+├─ 011_08 Lab - Policy Governance Implementation
+├─ 011_09 Sentinel Policies - Introduction
+├─ 011_10 Sentinel Policy Language and Syntax
+├─ 011_11 Sentinel Policy - ACL Enforcement
+├─ 011_12 Sentinel Policy - Time-Based Access Control
+├─ 011_13 Sentinel Policy - IP-Based Access Control
+├─ 011_14 Sentinel Policy - Secret Value Validation
+├─ 011_15 Lab - Writing Sentinel Policies
+├─ 011_16 Control Groups - Multi-Person Approval Workflows
+├─ 011_17 Control Groups - Approval Workflow Design
+├─ 011_18 Lab - Implementing Control Groups
+├─ 011_19 Control Groups - Emergency Bypass Procedures
+├─ 011_20 Vault Namespaces - Multi-Tenancy
+├─ 011_21 Namespaces - Design and Architecture
+├─ 011_22 Namespaces - Cross-Namespace Policies
+├─ 011_23 Lab - Namespace Implementation
+├─ 011_24 Namespaces - Multi-Tenant Best Practices
+├─ 011_25 Namespace Performance and Scaling
+└─ 011_26 Resource - Enterprise Access Control Guide
+
+012 Vault Scaling and Performance
+├─ 012_01 Scaling Vault for Performance - Overview
+├─ 012_02 Performance Standby Nodes - Read Scaling
+├─ 012_03 Performance Replication - Global Read Scaling
+├─ 012_04 Lab - Performance Replication Setup
+├─ 012_05 Batch Tokens - Lightweight Token Strategy
+├─ 012_06 Batch Tokens vs Service Tokens - Performance Comparison
+├─ 012_07 Lab - Batch Token Implementation
+├─ 012_08 Token Caching - Reducing Token Lookup Load
+├─ 012_09 Secret Caching - Reducing Secrets Engine Load
+├─ 012_10 Performance Tuning - Configuration Optimization
+├─ 012_11 Storage Backend Performance - Raft Optimization
+├─ 012_12 Memory and CPU Resource Planning
+├─ 012_13 Network Performance Considerations
+├─ 012_14 Load Balancing Strategies
+├─ 012_15 Performance Monitoring and Metrics
+├─ 012_16 Lab - Performance Testing and Benchmarking
+├─ 012_17 Performance Bottleneck Analysis
+├─ 012_18 Performance Replication - Path Filters
+├─ 012_19 Lab - Path Filter Configuration
+├─ 012_20 Performance Replication - Performance Standby Configuration
+└─ 012_21 Resource - Performance Optimization Guide
+
+013 Vault Integration Patterns and Best Practices
+├─ 013_01 Vault Integration Patterns - Overview
+├─ 013_02 Application Integration - Client Libraries
+├─ 013_03 Application Integration - REST API
+├─ 013_04 Application Integration - Vault Agent
+├─ 013_05 CI CD Integration - Jenkins
+├─ 013_06 Lab - Jenkins and Vault Integration
+├─ 013_07 CI CD Integration - GitHub Actions
+├─ 013_08 Lab - GitHub Actions and Vault
+├─ 013_09 CI CD Integration - GitLab CI
+├─ 013_10 Lab - GitLab CI and Vault
+├─ 013_11 CI CD Integration - CircleCI
+├─ 013_12 CI CD Integration - Azure DevOps
+├─ 013_13 CI CD Integration - AWS CodePipeline
+├─ 013_14 Lab - AWS CodePipeline and Vault
+├─ 013_15 Infrastructure as Code - Terraform
+├─ 013_16 Lab - Terraform and Vault
+├─ 013_17 Infrastructure as Code - Ansible
+├─ 013_18 Lab - Ansible and Vault
+├─ 013_19 Infrastructure as Code - CloudFormation
+├─ 013_20 Container Orchestration - Docker Swarm
+├─ 013_21 Container Orchestration - Nomad
+├─ 013_22 Lab - Nomad and Vault Integration
+├─ 013_23 Service Mesh - Consul Connect
+├─ 013_24 Service Mesh - Istio
+├─ 013_25 Lab - Istio and Vault Integration
+├─ 013_26 Service Mesh - Linkerd
+├─ 013_27 Logging and Monitoring - ELK Stack
+├─ 013_28 Logging and Monitoring - Splunk
+├─ 013_29 Logging and Monitoring - Datadog
+├─ 013_30 Lab - Datadog and Vault
+├─ 013_31 Database Integration - Connection Pooling
+├─ 013_32 Database Integration - Orchestration Tools
+├─ 013_33 Cloud Provider Integration - AWS
+├─ 013_34 Cloud Provider Integration - Azure
+├─ 013_35 Cloud Provider Integration - GCP
+├─ 013_36 Hybrid Cloud Integration Patterns
+├─ 013_37 Multi-Cloud Integration Patterns
+└─ 013_38 Resource - Integration Pattern Library
+
+014 Vault Disaster Recovery and Business Continuity
+├─ 014_01 Disaster Recovery Planning - Overview
+├─ 014_02 RPO RTO - Defining Recovery Objectives
+├─ 014_03 Disaster Recovery Strategies - Active Active
+├─ 014_04 Disaster Recovery Strategies - Active Passive
+├─ 014_05 Vault DR Replication - Automatic Failover
+├─ 014_06 Vault DR Replication - Manual Failover
+├─ 014_07 Lab - DR Replication Setup
+├─ 014_08 Lab - DR Failover Testing
+├─ 014_09 Backup and Restore - Snapshot Strategy
+unt─ 014_10 Backup and Restore - Automated Backups
+├─ 014_11 Lab - Automated Backup Implementation
+├─ 014_12 Backup and Restore - Cross Region Backups
+├─ 014_13 Backup Verification and Testing
+├─ 014_14 Disaster Recovery Drills and Testing
+├─ 014_15 Incident Response - Vault Outages
+├─ 014_16 Incident Response - Data Corruption
+├─ 014_17 Incident Response - Security Incidents
+├─ 014_18 Recovery Procedures - Step by Step
+├─ 014_19 Post-Incident Analysis and Improvement
+├─ 014_20 Business Continuity Planning
+├─ 014_21 Compliance and Disaster Recovery
+├─ 014_22 Resource - DR Planning Checklist
+
+015 Vault Compliance and Governance
+├─ 015_01 Vault Compliance - Overview
+├─ 015_02 SOC 2 Compliance with Vault
+├─ 015_03 Lab - SOC 2 Implementation with Vault
+├─ 015_04 ISO 27001 Compliance with Vault
+├─ 015_05 Lab - ISO 27001 Controls with Vault
+├─ 015_06 PCI DSS Compliance with Vault
+├─ 015_07 Lab - PCI DSS Implementation with Vault
+├─ 015_08 HIPAA Compliance with Vault
+├─ 015_09 Lab - HIPAA Controls with Vault
+├─ 015_10 GDPR Compliance with Vault
+├─ 015_11 Lab - GDPR Data Protection with Vault
+├─ 015_12 FIPS 140-2 Compliance with Vault
+├─ 015_13 Lab - FIPS Mode Configuration
+├─ 015_14 FedRAMP Compliance with Vault
+├─ 015_15 Audit Trail Requirements and Configuration
+├─ 015_16 Compliance Reporting and Dashboards
+├─ 015_17 Policy Governance and Enforcement
+├─ 015_18 Change Management for Vault
+├─ 015_19 Access Review and Certification
+├─ 015_20 Lab - Access Review Process
+├─ 015_21 Secret Rotation and Compliance
+├─ 015_22 Key Management and Compliance
+├─ 015_23 Risk Assessment and Mitigation
+├─ 015_24 Compliance Audits with Vault
+├─ 015_25 Resource - Compliance Control Matrix
+
+016 Vault Troubleshooting and Debugging
+├─ 016_01 Vault Troubleshooting - Overview
+├─ 016_02 Common Issues and Solutions
+├─ 016_03 Vault Startup Issues - Debugging
+├─ 016_04 Vault Performance Issues - Debugging
+├─ 016_05 Vault Storage Issues - Debugging
+├─ 016_06 Vault Authentication Issues - Debugging
+├─ 016_07 Vault Policy Issues - Debugging
+├─ 016_08 Vault Secrets Engine Issues - Debugging
+├─ 016_09 Vault Agent Issues - Debugging
+├─ 016_10 Vault Replication Issues - Debugging
+├─ 016_11 Operational Logs - Analysis
+├─ 016_12 Audit Logs - Analysis
+├─ 016_13 Lab - Log Analysis Workshop
+├─ 016_14 Vault Metrics - Analysis
+├─ 016_15 Vault Tracing - Distributed Tracing
+├─ 016_16 Lab - Performance Debugging
+├─ 016_17 Network Issues - Debugging
+├─ 016_18 TLS Certificate Issues - Debugging
+├─ 016_19 Storage Backend Issues - Debugging
+├─ 016_20 Raft Cluster Issues - Debugging
+├─ 016_21 Lab - Cluster Debugging
+├─ 016_22 Vault CLI - Debugging Commands
+├─ 016_23 Vault API - Debugging Techniques
+├─ 016_24 Vault UI - Debugging Tools
+├─ 016_25 Troubleshooting Checklist
+└─ 016_26 Resource - Troubleshooting Guide
+
+017 Real-World Production Scenarios
+├─ 017_01 Production Deployment Scenarios - Overview
+├─ 017_02 Scenario - Single Region Vault Deployment
+├─ 017_03 Lab - Single Region Deployment
+├─ 017_04 Scenario - Multi-Region Vault Deployment
+├─ 017_05 Lab - Multi-Region Deployment
+├─ 017_06 Scenario - High Traffic Web Application
+├─ 017_07 Lab - High Traffic Configuration
+├─ 017_08 Scenario - Microservices Architecture
+├─ 017_09 Lab - Microservices Integration
+├─ 017_10 Scenario - Legacy Application Migration
+├─ 017_11 Lab - Legacy App Integration
+├─ 017_12 Scenario - Financial Services Deployment
+├─ 017_13 Lab - Regulated Industry Deployment
+├─ 017_14 Scenario - Healthcare System Deployment
+├─ 017_15 Lab - HIPAA Compliant Deployment
+├─ 017_16 Scenario - E-commerce Platform
+├─ 017_17 Lab - E-commerce Secrets Management
+├─ 017_18 Scenario - SaaS Platform Multi-Tenant
+├─ 017_19 Lab - Multi-Tenant Implementation
+├─ 017_20 Scenario - Managed Service Provider
+├─ 017_21 Lab - MSP Architecture
+├─ 017_22 Scenario - Government Agency Deployment
+├─ 017_23 Lab - Government Compliance
+├─ 017_24 Scenario - CI CD Platform Integration
+├─ 017_25 Lab - CI CD Integration
+├─ 017_26 Scenario - Kubernetes Platform Integration
+├─ 017_27 Lab - K8s Platform Deployment
+├─ 017_28 Scenario - Hybrid Cloud Deployment
+├─ 017_29 Lab - Hybrid Cloud Setup
+├─ 017_30 Scenario - Database Credential Rotation
+├─ 017_31 Lab - Automated DB Rotation
+├─ 017_32 Scenario - PKI and Certificate Management
+├─ 017_33 Lab - PKI Implementation
+├─ 017_34 Scenario - SSH Key Management
+├─ 017_35 Lab - SSH Management
+├─ 017_36 Scenario - Encryption as a Service
+├─ 017_37 Lab - Transit Implementation
+├─ 017_38 Scenario - Secret Zero Problem
+├─ 017_39 Lab - Secret Zero Solutions
+└─ 017_40 Resource - Scenario Planning Guide
+
+018 Vault Capstone Project
+├─ 018_01 Capstone Project - Overview and Requirements
+├─ 018_02 Capstone Project - Architecture Design
+├─ 018_03 Capstone Project - Security Design
+├─ 018_04 Capstone Project - High Availability Design
+├─ 018_05 Capstone Project - Disaster Recovery Design
+├─ 018_06 Capstone Project - Multi-Region Design
+├─ 018_07 Capstone Project - Kubernetes Integration Design
+├─ 018_08 Capstone Project - CI CD Integration Design
+├─ 018_09 Capstone Project - Monitoring and Alerting Design
+├─ 018_10 Capstone Project - Implementation Phase 1 - Foundation
+├─ 018_11 Capstone Project - Implementation Phase 2 - Secrets Engines
+├─ 018_12 Capstone Project - Implementation Phase 3 - Auth Methods
+├─ 018_13 Capstone Project - Implementation Phase 4 - Policies
+├─ 018_14 Capstone Project - Implementation Phase 5 - Integration
+├─ 018_15 Capstone Project - Implementation Phase 6 - Monitoring
+├─ 018_16 Capstone Project - Testing and Validation
+├─ 018_17 Capstone Project - Performance Testing
+├─ 018_18 Capstone Project - Disaster Recovery Testing

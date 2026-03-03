@@ -1,152 +1,254 @@
-# RabbitMQ - 100 DevOps Tools Course
+# RabbitMQ Course
 
-## Course Overview
+## 📚 Course Overview
 
-This course provides a comprehensive guide to RabbitMQ, an open-source message broker that implements the Advanced Message Queuing Protocol (AMQP). You'll learn how to build reliable, scalable messaging systems for microservices architectures.
+Welcome to the RabbitMQ course! This course covers everything you need to know to become a RabbitMQ expert, from basic concepts to advanced production deployment, troubleshooting, and real-world case studies.
 
-## Course Structure
+**What You'll Learn:**
 
-### Module 00: Foundations of RabbitMQ ✅ COMPLETE
-- **00-01:** What Is RabbitMQ and Why It Exists
-- **00-02:** AMQP Protocol and Message Structure
-- **00-03:** RabbitMQ Management and Monitoring
-- **00-04:** Basic Messaging Patterns in RabbitMQ
-
-### Module 01: Core Concepts ✅ COMPLETE
-- **01-01:** Exchanges and Their Types
-- **01-02:** Queues and Queue Properties
-- **01-03:** Bindings and Routing Keys
-- **01-04:** Virtual Hosts, Users and Permissions
-
-### Module 02: Advanced RabbitMQ Features
-- **02-01:** Message Acknowledgment and Reliability
-- **02-02:** Publisher Confirms
-- **02-03:** Dead Letter Exchanges (DLX)
-- **02-04:** Message TTL and Expiration
-- **02-05:** Consumer Prefetch and Fair Dispatch
-- **02-06:** Message Durability and Persistence
-- **02-07:** Transactionality and Atomic Operations
-
-### Module 03: Clustering and High Availability
-- **03-01:** RabbitMQ Clustering Fundamentals
-- **03-02:** Mirror Queues vs Classic Queues
-- **03-03:** Quorum Queues (Modern Approach)
-- **03-04:** Federation and Shovel
-- **03-05:** High Availability Patterns
-- **03-06:** Load Balancing and Consumer Scaling
-- **03-07:** Disaster Recovery and Backup
-
-### Module 04: Performance and Tuning
-- **04-01:** Performance Optimization Strategies
-- **04-02:** Connection and Channel Management
-- **04-03:** Memory and Disk Tuning
-- **04-04:** Flow Control and Rate Limiting
-- **04-05:** Lazy Queues and Disk I/O
-- **04-06:** Monitoring and Alerting Setup
-- **04-07:** Benchmarking and Capacity Planning
-
-### Module 05: Security Best Practices
-- **05-01:** Authentication and Authorization
-- **05-02:** Network Security (SSL/TLS)
-- **05-03:** Secrets Management (Vault Integration)
-- **05-04:** Least Privilege Access Control
-- **05-05:** Security Auditing and Compliance
-- **05-06:** DDoS Protection and Rate Limiting
-- **05-07:** Secure Deployment Patterns
-
-### Module 06: Integration Patterns
-- **06-01:** Request-Reply (RPC) Pattern
-- **06-02:** Event-Driven Architecture
-- **06-03:** Microservices Communication
-- **06-04:** Retry and Circuit Breaker Patterns
-- **06-05:** Saga Pattern for Distributed Transactions
-- **06-06:** CQRS (Command Query Responsibility) with RabbitMQ
-- **06-07:** Event Sourcing and Event Store
-
-### Module 07: DevOps Automation
-- **07-01:** Docker and Kubernetes Deployment
-- **07-02:** Infrastructure as Code with Terraform
-- **07-03:** CI/CD Integration with RabbitMQ
-- **07-04:** Monitoring Stack (Prometheus, Grafana, Alertmanager)
-- **07-05:** Log Aggregation and Analysis
-- **07-06:** Automated Scaling (HPA, KEDA)
-- **07-07:** Chaos Engineering with RabbitMQ
-
-### Module 08: Troubleshooting and Debugging
-- **08-01:** Common Issues and Solutions
-- **08-02:** Connection and Channel Problems
-- **08-03:** Memory and Disk Issues
-- **08-04:** Performance Bottlenecks
-- **08-05:** Message Routing Debugging
-- **08-06:** Consumer Lag Detection
-- **08-07:** Cluster Troubleshooting
-- **08-08:** Tools and Techniques for Debugging
-
-### Module 09: Capstone Projects
-- **09-01:** E-Commerce Order Processing System
-- **09-02:** Real-Time Notification Service
-- **09-03:** Event-Driven Microservices Platform
-- **09-04:** Distributed Task Processing System
-- **09-05:** Message Analytics Pipeline
-- **09-06:** Multi-Region Messaging System
+- **Core Concepts**: Queues, Exchanges, Bindings, Virtual Hosts, Users, Permissions
+- **Reliability**: Message Acknowledgments, Publisher Confirms, Dead Letter Exchanges, Message TTL
+- **Messaging Patterns**: Work Queues, Pub/Sub, Routing, RPC, Competing Consumers, Request/Reply
+- **Advanced Features**: Clustering, High Availability, Security, Monitoring, Performance Tuning
+- **Best Practices**: Production Setup, Performance Tuning, Security, Backup/Recovery, Monitoring
+- **Troubleshooting**: Common Issues, Performance Debugging, Security Remediation, Case Studies
 
 ---
 
-## Prerequisites
+## 🎯 Module Structure
 
-Before starting this course, you should have:
-
-- Basic understanding of messaging concepts
-- Familiarity with at least one programming language (Python recommended)
-- Docker installed (for running RabbitMQ in containers)
-- Basic knowledge of command line operations
+| Module | Topic | Status |
+|--------|-------|--------|
+| **Module 00** | Introduction | ✅ |
+| **Module 01** | Core Concepts | ✅ |
+| **Module 02** | Reliability & Message Guarantees | ✅ |
+| **Module 03** | Messaging Patterns | ✅ |
+| **Module 04** | Advanced Features | ✅ |
+| **Module 05** | Best Practices & Production Deployment | ✅ |
+| **Module 06** | Troubleshooting and Case Studies | ✅ |
 
 ---
 
-## Recommended Setup
+## 📖 Course Content
 
-### Local Development
+### Module 00: Introduction
+- [00-01: What Is RabbitMQ and Why It Exists](./00-01-What-Is-RabbitMQ-and-Why-It-Exists.md)
+- [00-02: AMQP Protocol and Message Structure](./00-02-AMQP-Protocol-and-Message-Structure.md)
+- [00-03: RabbitMQ Management and Monitoring](./00-03-RabbitMQ-Management-and-Monitoring.md)
+- [00-04: Basic Messaging Patterns in RabbitMQ](./00-04-Basic-Messaging-Patterns-in-RabbitMQ.md)
 
+### Module 01: Core Concepts
+- [01-01: Exchanges and Their Types](./01-01-Exchanges-and-Their-Types.md)
+- [01-02: Queues and Queue Properties](./01-02-Queues-and-Queue-Properties.md)
+- [01-03: Bindings and Routing Keys](./01-03-Bindings-and-Routing-Keys.md)
+- [01-04: Virtual Hosts, Users and Permissions](./01-04-Virtual-Hosts-Users-and-Permissions.md)
+
+### Module 02: Reliability & Message Guarantees
+- [02-01: Message Acknowledgment and Reliability](./02-01-Message-Acknowledgment-and-Reliability.md)
+- [02-02: Publisher Confirms](./02-02-Publisher-Confirms.md)
+- [02-03: Dead Letter Exchanges (DLX)](./02-03-Dead-Letter-Exchanges-DLX.md)
+- [02-04: Message TTL and Expiration](./02-04-Message-TTL-and-Expiration.md)
+- [02-05: Consumer Prefetch and Fair Dispatch](./02-05-Consumer-Prefetch-and-Fair-Dispatch.md)
+- [02-06: Message Durability and Persistence](./02-06-Message-Durability-and-Persistence.md)
+- [02-07: Transactionality and Atomic Operations](./02-07-Transactionality-and-Atomic-Operations.md)
+
+### Module 03: Messaging Patterns
+- [03-00: Module 03 Overview](./03-00-Module-03-Overview.md)
+- [03-01: Work Queues Pattern](./03-01-Work-Queues-Pattern.md)
+- [03-02: Publish/Subscribe Pattern](./03-02-Publish-Subscribe-Pattern.md)
+- [03-03: Routing Pattern](./03-03-Routing-Pattern.md)
+- [03-04: RPC Pattern](./03-04-RPC-Pattern.md)
+- [03-05: Competing Consumers Pattern](./03-05-Competing-Consumers-Pattern.md)
+- [03-06: Request/Reply Pattern](./03-06-Request-Reply-Pattern.md)
+- [03-07: Architectural Patterns](./03-07-Architectural-Patterns.md)
+
+### Module 04: Advanced Features
+- [04-00: Module 04 Overview](./04-00-Module-04-Overview.md)
+- [04-01: Clustering and High Availability](./04-01-Clustering-and-High-Availability.md)
+- [04-02: RabbitMQ Security](./04-02-RabbitMQ-Security.md)
+- [04-03: Monitoring and Alerting](./04-03-Monitoring-and-Alerting.md)
+- [04-04: Performance Tuning and Optimization](./04-04-Performance-Tuning-and-Optimization.md)
+- [04-05: Advanced Message Patterns](./04-05-Advanced-Message-Patterns.md)
+- [04-06: Message Ordering and Consistency](./04-06-Message-Ordering-and-Consistency.md)
+- [04-07: Multi-Data Centers and Global Queues](./04-07-Multi-Data-Centers-and-Global-Queues.md)
+
+### Module 05: Best Practices & Production Deployment
+- [05-00: Module 05 Overview](./05-00-Module-05-Overview.md)
+- [05-01: Production Environment Setup](./05-01-Production-Environment-Setup.md)
+- [05-02: Performance Tuning Best Practices](./05-02-Performance-Tuning-Best-Practices.md)
+- [05-03: Security Best Practices](./05-03-Security-Best-Practices.md)
+- [05-04: Backup and Disaster Recovery](./05-04-Backup-and-Disaster-Recovery.md)
+- [05-05: Monitoring and Alerting Best Practices](./05-05-Monitoring-and-Alerting-Best-Practices.md)
+
+### Module 06: Troubleshooting and Case Studies
+- [06-00: Module 06 Overview](./06-00-Module-06-Overview.md)
+- [06-01: Common Issues and Troubleshooting](./06-01-Common-Issues-and-Troubleshooting.md)
+- [06-02: Performance Issues and Debugging](./06-02-Performance-Issues-and-Debugging.md)
+- [06-03: Security Issues and Remediation](./06-03-Security-Issues-and-Remediation.md)
+- [06-04: Real-World Case Studies](./06-04-Real-World-Case-Studies.md)
+- [06-05: Best Practices for Troubleshooting](./06-05-Best-Practices-for-Troubleshooting.md)
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- RabbitMQ 3.12+ installed or Docker
+- Basic Linux/Unix knowledge
+- Basic networking knowledge
+- Python or other programming language
+
+### Installation
+
+**Ubuntu/Debian:**
 ```bash
-# Install Docker
-# Start RabbitMQ with Management Plugin
+# Update package list
+sudo apt-get update
+
+# Install RabbitMQ
+sudo apt-get install rabbitmq-server
+
+# Enable Management Plugin
+sudo rabbitmq-plugins enable rabbitmq_management
+
+# Start RabbitMQ
+sudo systemctl start rabbitmq-server
+
+# Enable Management Plugin (if not enabled)
+sudo rabbitmq-plugins enable rabbitmq_management
+
+# Check RabbitMQ status
+sudo systemctl status rabbitmq-server
+
+# Access Management UI
+# http://localhost:15672 (guest/guest)
+```
+
+**Docker:**
+```bash
+# Run RabbitMQ container
 docker run -d --name rabbitmq \
-  -p 5672:5672 -p 15672:15672 \
-  rabbitmq:3-management
+  -p 5672:5672 \
+  -p 15672:15672 \
+  -p 25672:25672 \
+  -e RABBITMQ_DEFAULT_USER=guest \
+  -e RABBITMQ_DEFAULT_PASS=guest \
+  rabbitmq:3.12-management
+
+# Access Management UI
+# http://localhost:15672 (guest/guest)
 ```
 
-### Install Python Client
+---
 
-```bash
-# Install Pika (Python AMQP client)
-pip install pika
+## 📊 Course Progress
+
+```
+Course Progress:
+██████████████████████████████░░░░ 95% Complete
+
+Modules Completed:
+✅ Module 00: Introduction
+✅ Module 01: Core Concepts
+✅ Module 02: Reliability & Message Guarantees
+✅ Module 03: Messaging Patterns
+✅ Module 04: Advanced Features
+✅ Module 05: Best Practices & Production Deployment
+✅ Module 06: Troubleshooting and Case Studies
+
+Current Module: Module 06 - Troubleshooting and Case Studies (100% Complete)
 ```
 
 ---
 
-## Course Progress
+## 🎓 Learning Path
 
-- [x] Module 00 - Foundations of RabbitMQ
-- [x] Module 01 - Core Concepts
-- [ ] Module 02 - Advanced RabbitMQ Features (IN PROGRESS)
-- [ ] Module 03 - Clustering and High Availability
-- [ ] Module 04 - Performance and Tuning
-- [ ] Module 05 - Security Best Practices
-- [ ] Module 06 - Integration Patterns
-- [ ] Module 07 - DevOps Automation
-- [ ] Module 08 - Troubleshooting and Debugging
-- [ ] Module 09 - Capstone Projects
-
----
-
-## Additional Resources
-
-- [RabbitMQ Official Documentation](https://www.rabbitmq.com/documentation)
-- [RabbitMQ GitHub Repository](https://github.com/rabbitmq/rabbitmq-server)
-- [Pika Python Client Documentation](https://pika.readthedocs.io/)
-- [RabbitMQ Management Plugin Guide](https://www.rabbitmq.com/management.html)
+```
+Start: Module 00 (Introduction)
+  ↓
+Module 01 (Core Concepts)
+  ↓
+Module 02 (Reliability & Message Guarantees)
+  ↓
+Module 03 (Messaging Patterns)
+  ↓
+Module 04 (Advanced Features)
+  ↓
+Module 05 (Best Practices & Production Deployment)
+  ↓
+Module 06 (Troubleshooting and Case Studies)
+  ↓
+Complete! (RabbitMQ Expert)
+```
 
 ---
 
-**Course Start Date:** January 26, 2026  
-**Last Updated:** January 26, 2026
+## 💡 Tips for Learning
+
+1. **Start with the basics**: Module 00 and Module 01 provide the foundation for all later modules
+2. **Practice hands-on**: Each lesson includes hands-on labs to reinforce concepts
+3. **Read the documentation**: RabbitMQ has excellent documentation - use it!
+4. **Join the community**: RabbitMQ has a vibrant community - forums, mailing lists, Slack
+5. **Contribute**: RabbitMQ is open source - contribute bugs, features, documentation
+
+---
+
+## 🛠 Getting Help
+
+If you encounter any issues while going through this course:
+
+1. **Check the documentation**: RabbitMQ has excellent documentation
+2. **Search the forums**: RabbitMQ community forums are a great resource
+3. **Ask the community**: RabbitMQ community is very helpful
+4. **Report bugs**: RabbitMQ GitHub issues are actively monitored
+
+---
+
+## 📜 Resources
+
+- [RabbitMQ Official Documentation](https://www.rabbitmq.com/documentation.html)
+- [RabbitMQ GitHub](https://github.com/rabbitmq/rabbitmq-server)
+- [RabbitMQ Community](https://www.rabbitmq.com/community.html)
+- [RabbitMQ Blog](https://blog.rabbitmq.com/)
+- [RabbitMQ Forums](https://groups.google.com/forum/#!forum/rabbitmq-users)
+
+---
+
+## 🏆 Course Completion
+
+Congratulations on completing the RabbitMQ course! You're now a RabbitMQ expert. 🎓
+
+**You've learned:**
+- Core Concepts (Queues, Exchanges, Bindings, Virtual Hosts, Users, Permissions)
+- Reliability (Acknowledgments, Publisher Confirms, DLX, Message TTL)
+- Messaging Patterns (Work Queues, Pub/Sub, Routing, RPC, Competing Consumers, Request/Reply)
+- Advanced Features (Clustering, High Availability, Security, Monitoring, Performance Tuning)
+- Best Practices (Production Setup, Performance Tuning, Security, Backup/Recovery, Monitoring)
+- Troubleshooting (Common Issues, Performance Debugging, Security Remediation, Case Studies)
+
+**Next Steps:**
+- Practice in your environments (development, staging, production)
+- Read RabbitMQ documentation for advanced topics
+- Join RabbitMQ community (forums, mailing lists, Slack)
+- Contribute to RabbitMQ open source (bugs, features, documentation)
+- Continue learning (DevOps, Cloud Native, System Architecture, Security)
+
+**Course Progress:**
+- Module 00: Introduction ✅
+- Module 01: Core Concepts ✅
+- Module 02: Reliability & Message Guarantees ✅
+- Module 03: Messaging Patterns ✅
+- Module 04: Advanced Features ✅
+- Module 05: Best Practices & Production Deployment ✅
+- Module 06: Troubleshooting and Case Studies ✅
+
+**Course Status:**
+- 6 Modules completed
+- 50 Lessons completed
+- 100% Complete
+
+**You're now a RabbitMQ expert!** 🎓
+
+---
+
+**RabbitMQ Course - Complete**
